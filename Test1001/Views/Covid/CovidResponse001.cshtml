@@ -1,0 +1,32 @@
+﻿@model Test1001.Models.CovidDiagnosis
+
+@using (Html.BeginForm())
+{
+    <p>
+        Your name: @Html.TextBoxFor(x => x.Name)
+    </p>
+    <p>
+        Your phone: @Html.TextBoxFor(x => x.Phone)
+    </p>
+    <p>Please check if yes.</p>
+    <p>
+        Do you have fever? @Html.CheckBoxFor(x => x.Fever)
+    </p>
+    <p>
+        Do you have dry cough? @Html.CheckBoxFor(x => x.Cough)
+    </p>
+    <p>
+        Do you have breathing difficulty? @Html.CheckBoxFor(x => x.Breath)
+    </p>
+    <p>
+        Have you been overseas and felt sick within 14 days of
+        returning (person under investigation)? @Html.CheckBoxFor(x => x.Oversea)
+    </p>
+    <p>
+        Have you been in contact with someone who is a confirmed case of COVID-19
+        (close contact)? @Html.CheckBoxFor(x => x.Contact)
+    </p>
+    <p>
+        <input type="submit" value="Submit Response" />
+    </p>
+}
